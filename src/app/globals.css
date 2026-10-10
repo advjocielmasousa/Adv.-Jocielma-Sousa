@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f2025;
+  --background-deep: #0a181b;
+  --surface: #f5f2ea;
+  --foreground: #242424;
+  --brand: #b8a06a;
+  --brand-deep: #8b7450;
+  --brand-soft: rgba(184, 160, 106, 0.14);
+  --ink: #102a2e;
+  --muted: #58666b;
+  --card: #f8f5f1;
+  --border: rgba(184, 160, 106, 0.22);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-cinzel);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-cinzel), Georgia, serif;
+  letter-spacing: -0.04em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: rgba(184, 160, 106, 0.18);
+}
+
+@keyframes heroImageReveal {
+  0% {
+    opacity: 0;
+    transform: translate3d(28px, 18px, 0) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
